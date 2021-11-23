@@ -1,2 +1,3 @@
-# BOJ_JavaScript
-BOJ Solutions in JavaScript
+### BOJ JavaScript
+
+> BOJ Solutions in JavaScript
