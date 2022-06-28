@@ -49,3 +49,51 @@ else {
 }
 // 범위 출력
 console.log(arr[n - 1] - arr[0]);
+
+
+/* 풀이 방법 2
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+
+let n = Number(input[0]);
+let arr = [];
+for (let i = 1; i <= n; i++) {
+  arr.push(Number(input[i]));
+}
+
+// 산술 평균
+let sum = 0;
+for (let i = 0; i < n; i++) sum += arr[i];
+console.log(parseInt(Math.round(sum / n)));
+
+// 중앙값
+arr.sort((a, b) => a - b);
+console.log(arr[parseInt(n / 2)]);
+
+// 최빈값
+counter = {};
+let maxCount = -1;
+for (let i = 0; i < n; i++) {
+  if (arr[i] in counter) counter[arr[i]]++;
+  else counter[arr[i]] = 1;
+  maxCount = Math.max(maxCount, counter[arr[i]]);
+}
+let maxValues = [];
+for (const [key, value] of Object.entries(counter)) {
+  if (value == maxCount) {
+    maxValues.push(key);
+  }
+}
+maxValues.sort((a, b) => a - b);
+if (maxValues.length == 1) console.log(maxValues[0]);
+else console.log(maxValues[1]);
+
+// 가장 작은 값, 큰 값 출력
+let minValue = 4001;
+let maxValue = -4001;
+for (let i = 0; i < n; i++) {
+  minValue = Math.min(minValue, arr[i]);
+  maxValue = Math.max(maxValue, arr[i]);
+}
+console.log(maxValue - minValue);
+*/
