@@ -12,3 +12,11 @@ for (let t = 1; t <= testCase; t++) {
   let b = Number(data[1]);
   console.log(`Case #${t}: ${a} + ${b} = ${a + b}`); // 템플릿 리터럴을 활용한 문자열 출력
 }
+
+/*
+let n = Number(input[0]);
+for (let i = 1; i <= n; i++) {
+  let [a, b] = input[i].split(' ').map(Number);
+  console.log(`Case #${i}: ${a} + ${b} = ${a + b}`);
+}
+*/
